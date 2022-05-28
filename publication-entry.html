@@ -4,13 +4,16 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<title>Document</title>
+    <link rel="preload" href="fonts/montserrat-v23-latin_cyrillic-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-v23-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-v23-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="body">
-    <div class="container container--for-header">
+    <div class="container">
         <header class="header header--no-background ">
             <section class="header__top-section">
-                <div class="header__top">
+                <div class="header__top header__top--white">
                     <ul class="header__lang-menu">
                         <li>
                             <a class="header__lang-menu-text header__lang-menu-text--dark" href="#">ук</a>
@@ -24,36 +27,36 @@
                     </ul>
                     <div class="header__adress">Kyiv, Mechnikova str, 14/1</div>
                     <a class="header__tel header__tel--dark" href="tel:0800211927">0800 211 927</a>
-                    <a class="header__fb-link">
-                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z" fill="#B3B3BA"/>
-                        </svg>
-                    </a>
+                    <div class="header__fb-link">   
+                        <a class="header__fb-link-logo" href="#" aria-label="посилання на фейсбук">
+                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z" fill="#B3B3BA"/>
+                            </svg>
+                        </a>
+                    </div>   
                 </div>    
                 <div class="header__logo">
                     <a class="header__logo-link" href="#">
                         <img class="img-responsive" src="img/head-logo-dark.svg" width="130" height="60" alt="">
-                        <a class="header__logo-text-dark" href="#">publications</a>
+                        <p class="header__logo-text-dark">publications</p>
                     </a>
                 </div>
-                <div class="header__menu header__menu--dark">
-                    <ul class="header__menu-list">
-                        <li>
-                            <a class="header__menu-text header__menu-text--dark" href="#">about us</a>
-                        </li>
-                        <li>
-                            <a class="header__menu-text header__menu-text--dark" href="#">services</a>
-                        </li>
-                        <li>
-                            <a class="header__menu-text header__menu-text--dark" href="#">team</a>
-                        </li>
-                        <li>
-                            <a class="header__menu-text header__menu-text--dark header__menu-text--active" href="#">publications</a>
-                        </li>
-                        <li>
-                            <a class="header__menu-text header__menu-text--dark" href="#">contact</a>
-                        </li>
-                    </ul>
+                <button class="header__menu-button" type="button" aria-label="кнопка меню">
+                    <span class="header__menu-button-line header__menu-button-line--dark"></span>
+                    <span class="header__menu-button-line header__menu-button-line--dark"></span>
+                    <span class="header__menu-button-line header__menu-button-line--dark"></span>
+                </button>
+                <div class="header__menu">
+                    <div class="header__menu-list header__menu-list--show">
+                        <p class="header__menu-list-button">
+                            <button class="header__menu-close-btn" type="button" aria-label="кнопка закриття"></button> 
+                        </p>
+                        <a class="header__menu-text header__menu-text--dark" href="#">about us</a>
+                        <a class="header__menu-text header__menu-text--dark" href="#">services</a>
+                        <a class="header__menu-text header__menu-text--dark" href="#">team</a>                                                        
+                        <a class="header__menu-text header__menu-text--active" href="#">publications</a>                   
+                        <a class="header__menu-text header__menu-text--dark" href="#">contact</a>
+                    </div>    
                 </div>
             </section>    
         </header>
@@ -95,8 +98,8 @@
                     In the case of personalization of advertising, Google was sure to obtain the consent of users, because, firstly, when creating Google accounts, the user agrees to the Privacy Policy, 
                     and secondly, Google has a section "Ads personalization", where you can disable this feature.
                 </p>
-                <div class="publication__photo">
-                    <img class="publication__photo-personalization img-responsive" src="img/publication-personalization.jpg" width="640" height="398" alt="">
+                <div class="publication__photo-personalization">
+                    <img class="publication__photo-personalization-pic img-responsive" src="img/publication-personalization.jpg" width="640" height="398" alt="">
                 </div>
                 <h3 class="publication__title-grey">
                     This is what the ad personalization settings window in your Google Account looks like
@@ -114,13 +117,13 @@
                 </p>
                 <div class="publication__links">
                     <a href="#">
-                        <div class="publication__link-facebook"></div>
+                        <div class="publication__link-facebook" aria-label="посилання на фейсбук"></div>
                     </a>
                     <a href="#">
-                        <div class="publication__link-telegram"></div>
+                        <div class="publication__link-telegram" aria-label="посилання на телеграм"></div>
                     </a>   
                     <a href="#">
-                    <div class="publication__link-linkedin"></div>
+                    <div class="publication__link-linkedin" aria-label="посилання на лінкедін"></div>
                     </a>
                 </div>
             </section>
@@ -129,7 +132,7 @@
             <div class="container">
                 <section class="publications">
                     <div class="publications__link">
-                        <a class="publications__link-text">Publications</a>
+                        <a class="publications__link-text" href="#">Publications</a>
                     </div>
                     <h2 class="publications__title">Recommended</h2>
                     <div class="publications__articles">
@@ -138,7 +141,7 @@
                                 <img class="img-responsive publications__equity-pic" src="img/equity-pic.jpg" width="420" height="200" alt="">
                             </div>
                             <div class="publications__text-block">
-                                <h3 class="publications__block-title">Equity associate</h3>
+                                <a class="publications__block-title" href="#">Equity associate</a>
                                 <p class="publications__block-date">April 22</p>
                                 <p class="publications__block-text">
                                     I'm a jun on projects. I am a co-owner of a law firm. How it happened. 
@@ -151,8 +154,8 @@
                                 <img class="img-responsive publications__penalty-pic" src="img/pentalty-pic.jpg" width="420" height="200" alt="">
                             </div>
                             <div class="publications__text-block">
-                                <h3 class="publications__block-title">Penalty for the Good Corporation: 
-                                    what will happen to Google and others for violating the GDPR</h3>
+                                <a class="publications__block-title" href="#">Penalty for the Good Corporation: 
+                                    what will happen to Google and others for violating the GDPR</a>
                                 <p class="publications__block-date">September 29</p>
                                 <p class="publications__block-text">
                                     And why the recovery of 50 million euros could be a fateful precedent 
@@ -165,7 +168,7 @@
                                 <img class="img-responsive publications__millennial-pic" src="img/millennial-pic.jpg" width="420" height="200" alt="">
                             </div>
                             <div class="publications__text-block">
-                                <h3 class="publications__block-title">Millennial Testament</h3>
+                                <a class="publications__block-title" href="#">Millennial Testament</a>
                                 <p class="publications__block-date">August 19</p>
                                 <p class="publications__block-text">
                                     What and how modern vloggers, opinion leaders and crypto-millionaires will inherit 
@@ -175,7 +178,6 @@
                         </article>
                     </div>    
                 </section>
-                </div> 
             </div>
         </div>    
     </main>   
@@ -184,15 +186,19 @@
             <div class="footer__info">
                 <div class="footer__adress">
                     <p class="footer__adress-location">Kyiv, Mechnikova str., 14/1</p>
-                    <a class="footer__adress-map">On map</a>
+                    <a class="footer__adress-map" href="#">On map</a>
                 </div>
                 <div class="footer__contacts">
-                    <a class="fcbk-link">
-                        <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M38.5 19.1786C38.5 8.62107 29.9934 0.0625 19.5 0.0625C9.00658 0.0625 0.5 8.62107 0.5 19.1786C0.5 28.72 7.44803 36.6284 16.5312 38.0625V24.7044H11.707V19.1786H16.5312V14.9671C16.5312 10.1761 19.3678 7.52973 23.7078 7.52973C25.7866 7.52973 27.9609 7.90309 27.9609 7.90309V12.6075H25.5651C23.2048 12.6075 22.4688 14.081 22.4688 15.5927V19.1786H27.7383L26.8959 24.7044H22.4688V38.0625C31.552 36.6284 38.5 28.72 38.5 19.1786Z" fill="#24A3FF"/>
-                        </svg>
-                    </a>
-                    <a class="footer__tel" href="tel:0800211927">0800 211 927</a>
+                    <div class="fcbk-link">
+                        <a class="fcbk-link__box" href="#" aria-label="посилання на фейсбук">
+                            <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M38.5 19.1786C38.5 8.62107 29.9934 0.0625 19.5 0.0625C9.00658 0.0625 0.5 8.62107 0.5 19.1786C0.5 28.72 7.44803 36.6284 16.5312 38.0625V24.7044H11.707V19.1786H16.5312V14.9671C16.5312 10.1761 19.3678 7.52973 23.7078 7.52973C25.7866 7.52973 27.9609 7.90309 27.9609 7.90309V12.6075H25.5651C23.2048 12.6075 22.4688 14.081 22.4688 15.5927V19.1786H27.7383L26.8959 24.7044H22.4688V38.0625C31.552 36.6284 38.5 28.72 38.5 19.1786Z" fill="#24A3FF"/>
+                            </svg>
+                        </a>
+                    </div> 
+                    <div class="footer__tel">
+                        <a class="footer__tel-text" href="tel:0800211927">0800 211 927</a>
+                    </div>      
                     <a class="footer__mail" href="mailto:contact@forstudy.space">contact@forstudy.space</a>
                 </div>
                 <div class="footer__copyright">
@@ -204,4 +210,4 @@
         </div>     
     </footer> 
 </body>
-</html>          
+</html>

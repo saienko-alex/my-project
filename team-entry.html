@@ -4,13 +4,17 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<title>Document</title>
+    <link rel="preload" href="fonts/montserrat-v23-latin_cyrillic-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-v23-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-v23-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="body">
-    <div class="container container--for-header">
+    <div class="container">
+        <div class="header__overlay"></div>
         <header class="header header--no-background ">
             <section class="header__top-section">
-                <div class="header__top">
+                <div class="header__top header__top--white">
                     <ul class="header__lang-menu">
                         <li>
                             <a class="header__lang-menu-text header__lang-menu-text--dark" href="#">ук</a>
@@ -24,45 +28,46 @@
                     </ul>
                     <div class="header__adress">Kyiv, Mechnikova str, 14/1</div>
                     <a class="header__tel header__tel--dark" href="tel:0800211927">0800 211 927</a>
-                    <a class="header__fb-link">
-                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z" fill="#B3B3BA"/>
-                        </svg>
-                    </a>
+                    <div class="header__fb-link">
+                        <a class="header__fb-link-logo" href="#" aria-label="посилання на фейсбук">
+                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z" fill="#B3B3BA"/>
+                            </svg>
+                        </a>
+                    </div> 
                 </div>    
                 <div class="header__logo">
                     <a class="header__logo-link" href="#">
                         <img class="img-responsive" src="img/head-logo-dark.svg" width="130" height="60" alt="">
-                        <a class="header__logo-text-dark" href="#">publications</a>
+                        <p class="header__logo-text-dark">team</p>
                     </a>
                 </div>
-                <div class="header__menu header__menu--dark">
-                    <ul class="header__menu-list">
-                        <li>
-                            <a class="header__menu-text header__menu-text--dark" href="#">about us</a>
-                        </li>
-                        <li>
-                            <a class="header__menu-text header__menu-text--dark" href="#">services</a>
-                        </li>
-                        <li>
-                            <a class="header__menu-text header__menu-text--dark header__menu-text--active" href="#">team</a>
-                        </li>
-                        <li>
-                            <a class="header__menu-text header__menu-text--dark" href="#">publications</a>
-                        </li>
-                        <li>
-                            <a class="header__menu-text header__menu-text--dark"  href="#">contact</a>
-                        </li>
-                    </ul>
+                <button class="header__menu-button" type="button" aria-label="кнопка меню">
+                    <span class="header__menu-button-line header__menu-button-line--dark"></span>
+                    <span class="header__menu-button-line header__menu-button-line--dark"></span>
+                    <span class="header__menu-button-line header__menu-button-line--dark"></span>
+                </button>
+                <div class="header__menu">
+                    <div class="header__menu-list header__menu-list--show">
+                        <p class="header__menu-list-button">
+                            <button class="header__menu-close-btn" type="button" aria-label="кнопка закриття"></button> 
+                        </p>
+                        <a class="header__menu-text header__menu-text--dark" href="#">about us</a>
+                        <a class="header__menu-text header__menu-text--dark" href="#">services</a>
+                        <a class="header__menu-text header__menu-text--active" href="#">team</a>                                                        
+                        <a class="header__menu-text header__menu-text--dark" href="#">publications</a>                   
+                        <a class="header__menu-text header__menu-text--dark" href="#">contact</a>
+                    </div>    
                 </div>
             </section>    
         </header>
+
     </div>
     <main>
         <div class="container">
             <div class="team-member">
                 <div class="team-member__photo-block">
-                    <img class="team-member__img img-responsive" src="img/team-member-photo.jpg" width="400" height="500" alt="">
+                    <img class="team-member__img" src="img/team-member-photo.jpg" width="400" height="500" alt="">
                 </div>
                 <div class="team-member__contact-block">  
                     <h1 class="team-member__title">Oksana Kobzar</h1>
@@ -104,15 +109,19 @@
             <div class="footer__info footer__info--no-border">
                 <div class="footer__adress">
                     <p class="footer__adress-location">Kyiv, Mechnikova str., 14/1</p>
-                    <a class="footer__adress-map">On map</a>
+                    <a class="footer__adress-map" href="#">On map</a>
                 </div>
                 <div class="footer__contacts">
-                    <a class="fcbk-link">
-                        <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M38.5 19.1786C38.5 8.62107 29.9934 0.0625 19.5 0.0625C9.00658 0.0625 0.5 8.62107 0.5 19.1786C0.5 28.72 7.44803 36.6284 16.5312 38.0625V24.7044H11.707V19.1786H16.5312V14.9671C16.5312 10.1761 19.3678 7.52973 23.7078 7.52973C25.7866 7.52973 27.9609 7.90309 27.9609 7.90309V12.6075H25.5651C23.2048 12.6075 22.4688 14.081 22.4688 15.5927V19.1786H27.7383L26.8959 24.7044H22.4688V38.0625C31.552 36.6284 38.5 28.72 38.5 19.1786Z" fill="#24A3FF"/>
-                        </svg>
-                    </a>
-                    <a class="footer__tel" href="tel:0800211927">0800 211 927</a>
+                    <div class="fcbk-link">
+                        <a class="fcbk-link__box" href="#" aria-label="посилання на фейсбук">
+                            <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M38.5 19.1786C38.5 8.62107 29.9934 0.0625 19.5 0.0625C9.00658 0.0625 0.5 8.62107 0.5 19.1786C0.5 28.72 7.44803 36.6284 16.5312 38.0625V24.7044H11.707V19.1786H16.5312V14.9671C16.5312 10.1761 19.3678 7.52973 23.7078 7.52973C25.7866 7.52973 27.9609 7.90309 27.9609 7.90309V12.6075H25.5651C23.2048 12.6075 22.4688 14.081 22.4688 15.5927V19.1786H27.7383L26.8959 24.7044H22.4688V38.0625C31.552 36.6284 38.5 28.72 38.5 19.1786Z" fill="#24A3FF"/>
+                            </svg>
+                        </a>
+                    </div> 
+                    <div class="footer__tel">
+                        <a class="footer__tel-text" href="tel:0800211927">0800 211 927</a>
+                    </div>      
                     <a class="footer__mail" href="mailto:contact@forstudy.space">contact@forstudy.space</a>
                 </div>
                 <div class="footer__copyright">
@@ -123,5 +132,6 @@
             </div>
         </div>     
     </footer> 
+    <script src="./js/script.js"></script>
 </body>
-</html>
+</html>     
